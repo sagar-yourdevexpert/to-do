@@ -11,6 +11,7 @@ return new class extends Migration
         Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
             $table->string('tokenable_type', 191);
+            $table->string('name')->nullable(); // This should exist
             $table->unsignedBigInteger('tokenable_id');
             $table->timestamps();
         });
